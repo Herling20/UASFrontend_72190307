@@ -1,0 +1,34 @@
+@page "/enrollpage"
+
+@* <table>
+    <tr>
+        <td><h1>List of Student</h1></td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <td>
+            <a href="addstudent">Create New</a>
+        </td>
+    </tr> 
+</table>
+<br>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>CourseID</th>
+            <th>Title</th>
+            <th>Credits</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var enr in Enrollments)
+        {
+            <tr>
+                <td>@enr.courseID</td>
+                <td>@std.lastName</td>
+                <td>@std.firstName</td>
+            </tr>
+        }
+    </tbody>
+</table> *@

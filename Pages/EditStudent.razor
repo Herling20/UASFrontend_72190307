@@ -1,0 +1,65 @@
+@page "/editstudent/{id}"
+
+<h1>Edit</h1>
+<h3>Student</h3>
+
+<hr>
+<EditForm Model="@Student" OnValidSubmit="HandleValidSubmit">
+    <table width="35%">
+        <tr>
+            <td>
+                <label for="studentID" class="">
+                    NIM
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <InputText id="studentID" class="form-control" @bind-Value="Student.studentID" />
+            </td>
+        </tr>
+        <br>
+        <tr>
+            <td>
+                <label for="firsName" class="">
+                    Nama Depan
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <InputText id="firstName" class="form-control" placeholder="First Name" @bind-Value="Student.firstName" />
+            </td>
+        </tr>
+        <br>
+        <tr>
+            <td>
+                <label for="lastName" class="">
+                    Nama Belakang
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <InputText id="lastName" class="form-control" placeholder="Last Name" @bind-Value="Student.lastName" />
+            </td>
+        </tr>
+        <br>
+        <tr>
+            <td>
+                <label for="enrollmentDate" class="">
+                    Tanggal Masuk
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <InputDate id="enrollmentDate" class="form-control" @bind-Value="Student.enrollmentDate" />
+            </td>
+        </tr>
+    </table>
+    <br>
+    <button class="btn btn-primary" type="submit">
+        Save
+    </button>
+</EditForm>
