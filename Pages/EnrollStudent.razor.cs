@@ -13,15 +13,14 @@ namespace UAS_Front_72190307.Pages
         [Parameter]
         public string id { get; set; }
 
-        public Enrollment Enrollments {  get; set; } = new Enrollment();
+        public List<Enrollment> Enrollments {  get; set; } = new List<Enrollment>();
 
         [Inject]
         public IEnrollService EnrollService { get; set; }
 
         protected override async Task OnInitializedAsync()
         {
-            id = id ?? "1";
-            Enrollments = await EnrollService.GetById(int.Parse(id));
+            Enrollments = (await EnrollService.GetAll(int.Parse(id))).ToList();
         }
     }
 }

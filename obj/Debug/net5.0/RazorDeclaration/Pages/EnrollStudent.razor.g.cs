@@ -82,7 +82,7 @@ using UAS_Front_72190307.Shared;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/enrollpage")]
+    [Microsoft.AspNetCore.Components.RouteAttribute("/enrollpage/{id}")]
     public partial class EnrollStudent : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998

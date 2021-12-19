@@ -8,7 +8,7 @@ namespace UAS_Front_72190307.Services
 {
     public interface IEnrollService
     {
-        Task<Enrollment> GetById(int id);
+        Task<IEnumerable<Enrollment>> GetAll(int id);
         
     }
 }

@@ -1,8 +1,8 @@
-@page "/enrollpage"
+@page "/enrollpage/{id}"
 
-@* <table>
+<table>
     <tr>
-        <td><h1>List of Student</h1></td>
+        <td><h1>ShowEnrollment</h1></td>
     </tr>
 </table>
 <table>
@@ -26,9 +26,9 @@
         {
             <tr>
                 <td>@enr.courseID</td>
-                <td>@std.lastName</td>
-                <td>@std.firstName</td>
+                <td>@enr.title</td>
+                <td>@enr.credits</td>
             </tr>
         }
     </tbody>
-</table> *@
+</table>

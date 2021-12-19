@@ -17,10 +17,10 @@ namespace UAS_Front_72190307.Services
             _httpClient = httpClient;
         }
 
-        public async Task<Enrollment> GetById(int id)
+        public async Task <IEnumerable<Enrollment>> GetAll(int id)
         {
-            var results = await _httpClient.GetFromJsonAsync<Enrollment>($"enrollment/{id}");
-            return results;
+            var result = await _httpClient.GetFromJsonAsync<IEnumerable<Enrollment>>($"enrollment/{id}");
+            return result;
         }
     }
 }

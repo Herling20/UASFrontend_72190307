@@ -31,7 +31,7 @@
                 <td>@std.enrollmentDate</td>
                 <td>
                     <a class="btn btn-info btn-sm" href="@($"studentdetail/{std.studentID}")">detail</a>
-                    <button class="btn btn-primary btn-sm">enroll</button>
+                    <a class="btn btn-primary btn-sm" href="@($"enrollpage/{std.studentID}")">enroll</a>
                     <a class="btn btn-warning btn-sm" href="@($"editstudent/{std.studentID}")">edit</a>
                     <a class="btn btn-danger btn-sm" href="@($"deletestudent/{std.studentID}")">delete</a>
                 </td>
